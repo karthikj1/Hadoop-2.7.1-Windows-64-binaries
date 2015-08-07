@@ -1,6 +1,6 @@
 # Apache Hadoop 2.7.1 binary for Windows 64-bit platform
 
-This is an unofficial pre-compiled binary of Apache Hadoop 2.7.1 for Windows 64-bit platform. The tar.gz file is available [here](https://github.com/karthikj1/Hadoop-2.7.1-Windows-64-binaries/releases/download/untagged-0e2efcb29940d2686c86/hadoop-2.7.1.tar.gz)  under the Releases link in this repo.
+This is an unofficial pre-compiled binary of Apache Hadoop 2.7.1 for Windows 64-bit platform. The tar.gz file is available [here](https://github.com/karthikj1/Hadoop-2.7.1-Windows-64-binaries/releases/download/v2.7.1/hadoop-2.7.1.tar.gz)  under the Releases link in this repo.
 
 The official Hadoop release from Apache does not include a Windows binary and compiling from sources can be tedious so I've made this compiled distribution available.
 
