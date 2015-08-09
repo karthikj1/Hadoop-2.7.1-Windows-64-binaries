@@ -4,6 +4,8 @@ This is an unofficial pre-compiled binary of Apache Hadoop 2.7.1 for Windows 64-
 
 The official Hadoop release from Apache does not include a Windows binary and compiling from sources can be tedious so I've made this compiled distribution available.
 
+If you like it, please star my repo.
+
 # Hadoop 2.7.1 Compilation Instructions for Windows 64-bit
 
 I compiled the source using the following tools
@@ -66,7 +68,7 @@ mvn package -Pdist,native-win -DskipTests -Dtar
 ```
 Note that there are no spaces in ```-Pdist,native-win``` and the -P and -D options are case-sensitive.
 
-If everything goes well in the previous step, then the native distribution ```hadoop-2.7.1.tar.gz``` will be created inside ```C:\hadoop-2.7.1-src\hadoop-dist\target``` directory. (assuming your unpacked source files were in ```C:\hadoop-2.7.1-src```.
+If everything goes well in the previous step, then the native distribution ```hadoop-2.7.1.tar.gz``` will be created inside ```C:\hadoop-2.7.1-src\hadoop-dist\target``` directory. (assuming your unpacked source files were in ```C:\hadoop-2.7.1-src```).
 
 ### Common Errors
 Some common errors encountered during compilation and workarounds are listed below. In general, if you encounter build errors, try rerunning maven as 
@@ -83,7 +85,7 @@ Scrolling up a bit from the bottom after running the above command will show mor
 After a successful build and after installing Hadoop, you may find that the dfs file operations work correctly but the mapreduce fails with the following error.
 -	UnsatisfiedLinkError with org.apache.hadoop.io.nativeio.NativeIO$Windows.createDirectoryWithMode0 or org.apache.hadoop.io.nativeio.NativeIO$Windows.createFileWithMode0. 
 
-This suggests a problem with the path so make sure the Windows PATH environment variable includes the hadoop/bin directory. If you have more than one Hadoop version installed, make sure any previous versions are not hanging around on the path before the current versions Hadoop/bin directory and that should fix this problem.
+This suggests a problem with the path so make sure the Windows PATH environment variable includes the hadoop/bin directory. If you have more than one Hadoop version installed, make sure any previous versions are not hanging around on the path before the current version's Hadoop/bin directory. That should fix this problem.
 
 - When running the start-yarn and start-dfs commands, make sure you have write permissions to the hadoop namenode and datanode directories. Just make sure the two paths are different from each other. You can set these directories in etc/hadoop/hdfs-site.xml as:
 ```
